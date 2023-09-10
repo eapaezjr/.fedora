@@ -5,11 +5,11 @@ if [[ -d "$HOME/.local/share/fonts/Ubuntu" ]]; then
     rm -R $HOME/.local/share/fonts/Ubuntu/
     if [[ -d "$HOME/Documents/" ]]; then
         echo "English..."
-        cp -R $HOME/Documents/.files/fonts/* $HOME/.local/share/fonts/
+        cp -R $HOME/Documents/.fedora/fonts/* $HOME/.local/share/fonts/
         echo "Fonts Installed succesfully."
     elif [[ -d "$HOME/Documentos/" ]]; then
         echo "Spanish..."
-        cp -R $HOME/Documentos/.files/fonts/* $HOME/.local/share/fonts/
+        cp -R $HOME/Documentos/.fedora/fonts/* $HOME/.local/share/fonts/
         echo "Fonts Installed succesfully."
     else
         echo "No font installed, no Spanish or English detected..."
@@ -21,11 +21,11 @@ else
         echo "Fonts directory already exists..." 
         if [[ -d "$HOME/Documents/" ]]; then
             echo "English..."
-            cp -R $HOME/Documents/.files/fonts/* $HOME/.local/share/fonts/
+            cp -R $HOME/Documents/.fedora/fonts/* $HOME/.local/share/fonts/
             echo "Fonts Installed succesfully."
         elif [[ -d "$HOME/Documentos/" ]]; then
             echo "Spanish..."
-            cp -R $HOME/Documentos/.files/fonts/* $HOME/.local/share/fonts/
+            cp -R $HOME/Documentos/.fedora/fonts/* $HOME/.local/share/fonts/
             echo "Fonts Installed succesfully."
         else
             echo "No font installed, no Spanish or English detected..."
@@ -35,11 +35,11 @@ else
         mkdir -p $HOME/.local/share/fonts
         if [[ -d "$HOME/Documents/" ]]; then
             echo "English..."
-            cp -R $HOME/Documents/.files/fonts/* $HOME/.local/share/fonts/
+            cp -R $HOME/Documents/.fedora/fonts/* $HOME/.local/share/fonts/
             echo "Fonts Installed succesfully."
         elif [[ -d "$HOME/Documentos/" ]]; then
             echo "Spanish..."
-            cp -R $HOME/Documentos/.files/fonts/* $HOME/.local/share/fonts/
+            cp -R $HOME/Documentos/.fedora/fonts/* $HOME/.local/share/fonts/
             echo "Fonts Installed succesfully."
         else
             echo "No font installed, no Spanish or English detected..."
