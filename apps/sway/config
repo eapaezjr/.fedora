@@ -14,6 +14,7 @@ exec_always sh ~/.config/waybar/launch.sh $
 exec /usr/libexec/polkit-gnome-authentication-agent-1
 exec nm-applet &
 exec blueman-applet &
+exec udiskie -t -A &
 exec dunst &
 exec swayidle -w timeout 300 'swaylock -f' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f' &
 exec wl-paste --watch ~/go/bin/cliphist store &
