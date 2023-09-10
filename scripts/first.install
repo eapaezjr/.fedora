@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+echo "Let's install the packages..."
+
+sudo dnf install dunst libnotify sway swaybg swaylock swayidle xdg-desktop-portal-wlr \
+xorg-x11-server-Xwayland clipman wl-clipboard pipewire pipewire-alsa \
+pipewire-jack-audio-connection-kit wireplumber waybar alacritty git pcmanfm \
+file-roller neovim bluez blueman bluez-tools network-manager-applet btop \
+fastfetch mpv imv grim slurp ranger exa bat pavucontrol nodejs yarnpkg inxi \
+alsa-tools alsa-utils kvantum gtk2-engines gtk-murrine-engine python3-cairo \
+python3-gobject lxappearance brightnessctl polkit-gnome xhost firefox udiskie \
+libva-utils google-noto-emoji-fonts rofi-wayland -y
+
+cd
+systemctl enable --user wireplumber
+systemctl enable --user pipewire
+sudo systemctl enable bluetooth
+
+sudo dnf remove dmenu -y
+sudo ln -s /usr/bin/rofi /usr/bin/dmenu
+
+sudo echo "HandlePowerKey=ignore" >> /etc/systemd/logind.conf
+sudo systemctl kill -s HUP systemd-logind
+
+./fonts.sh
+./config.sh
+
+sudo echo "QT_STYLE_OVERRIDE=kvantum" >> /etc/environment
+sudo echo "MOZ_ENABLE_WAYLAND=1" >> /etc/environment
+
+sudo dnf install go -y
+go install go.senan.xyz/cliphist@latest
