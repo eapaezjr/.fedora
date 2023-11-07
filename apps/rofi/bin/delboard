@@ -1,1 +1,0 @@
-~/go/bin/cliphist list | rofi -dmenu -theme "$HOME/.config/rofi/config/standardtheme.rasi" -i -p "Select item to delete" | ~/go/bin/cliphist delete
