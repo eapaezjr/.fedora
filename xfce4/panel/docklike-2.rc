@@ -3,3 +3,4 @@ indicatorStyle=1
 indicatorOrientation=0
 noWindowsListIfSingle=true
 showPreviews=true
+pinned=/usr/share/applications/brave-browser.desktop;/usr/share/applications/xfce4-terminal.desktop;
